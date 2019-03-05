@@ -1,0 +1,10 @@
+<header [ngClass]="'header'">
+        <section [ngClass]="'container'" [ngStyle]="{'display': 'flex', 'flex-direction':'row'}">
+            <img src="/assets/logofinal.png" alt="MedArt" [ngClass]="'logo'" routerLink="/header">
+            <button mat-raised-button color="primary" routerLink="/doctors" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Лікарі</button> 
+            <button mat-raised-button color="primary" routerLink="/hospital" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Клініки</button>
+            <button class="ml-auto" mat-raised-button color="accent" routerLink="/auth" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Sign in</button> 
+        </section>
+        <div [ngClass]="'container'"> <h1 [ngStyle]="{'color': '#fff','margin-top':'50px'}">Обери свого лікаря</h1></div> 
+      </header>
+      <router-outlet></router-outlet>
