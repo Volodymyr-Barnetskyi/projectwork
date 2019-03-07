@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
+  public form: FormGroup = new FormGroup({
+    logintask: new FormControl(''),
+    pass: new FormControl('')
+  });
+  public login() {
+    localStorage.setItem('nickname', this.form.value.logintask);
+  }
   constructor() { }
-
   ngOnInit() {
   }
-
 }
+

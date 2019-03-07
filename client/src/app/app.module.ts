@@ -7,10 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import {MatButtonModule} from '@angular/material/button';
 import { HospitalComponent } from './hospital/hospital.component';
-import {MatToolbarModule} from '@angular/material';
+import {MatToolbarModule, MatInputModule, MatCardModule} from '@angular/material';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule
   ],
   exports: [
     HeaderComponent,

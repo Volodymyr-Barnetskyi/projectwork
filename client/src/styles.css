@@ -9,3 +9,7 @@ body{
     margin: 0px auto;
     width: 1170px;
 }
+.container h2{
+    text-align: center;
+    padding-top: 30px;
+}

@@ -1,3 +1,11 @@
-<p>
-  auth works!
-</p>
+<form action='' [formGroup]='form'>
+    <mat-card [ngClass]="'authcard'">
+        <mat-form-field [ngClass]="'authfield'">
+            <input type="text" required matInput placeholder="Login" color="primary" formControlName='logintask'>
+    </mat-form-field>
+        <mat-form-field>
+            <input type="password" required matInput placeholder="Password" color="primary" formControlName='pass'>
+        </mat-form-field>
+        <button mat-raised-button color='primary' [disabled]='form.invalid' (click)='login()'>Confirm</button>
+    </mat-card>
+</form>

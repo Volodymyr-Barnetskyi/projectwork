@@ -5,6 +5,64 @@
             <button mat-raised-button color="primary" routerLink="/hospital" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Клініки</button>
             <button class="ml-auto" mat-raised-button color="accent" routerLink="/auth" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Sign in</button> 
         </section>
-        <div [ngClass]="'container'"> <h1 [ngStyle]="{'color': '#fff','margin-top':'50px'}">Обери свого лікаря</h1></div> 
+        <div [ngClass]="'container'"> <h1 [ngStyle]="{'color': '#fff','margin-top':'50px'}">Обери свого лікаря</h1>
+          <mat-form-field [ngClass]="'selectdoctors'">
+              <mat-select color="primary" placeholder="Doctors" [ngClass]="'select'">
+                <mat-option *ngFor="let see of likari" >
+                  {{see.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div> 
       </header>
       <router-outlet></router-outlet>
+<section [ngClass]="'about'">
+  <article [ngClass]="'container'">
+    <h2>Інформація про систему</h2>
+      <div class="fear">
+      <mat-card class="features">
+          <img src="../assets/blood-donation.png" alt="icon" class="features__img">
+          <h4 class="features__h4"><span>Реформа eHealth</span> разом з Medics</h4>
+      </mat-card>
+      <mat-card class="features">
+          <img src="../assets/doctors.png" alt="icon" class="features__img">
+          <h4 class="features__h4"><span>Система Medics</span> для медичних
+            закладів та лікарів</h4>
+          </mat-card>
+      <mat-card class="features">
+          <img src="../assets/pacients.png" alt="icon" class="features__img">
+          <h4 class="features__h4">Для пацієнтів. 
+            Твоя медична картка</h4>
+          </mat-card>
+        </div>
+  </article>
+  <article [ngClass]="'container'">
+    <div class="feed">
+      <mat-card class="feedback">
+        <img src="../assets/blood-sample.png" alt="" class="feedback__img">
+        <h5 class="feedback__h5">20 лікарів</h5>
+      </mat-card>
+      <mat-card class="feedback">
+        <img src="../assets/heart-beat.png" alt="" class="feedback__img">
+        <h5 class="feedback__h5">6 відгуків</h5>
+      </mat-card>
+      <mat-card class="feedback">
+        <img src="../assets/specialities.png" alt="" class="feedback__img">
+        <h5 class="feedback__h5">Прийом без черг</h5>
+      </mat-card>
+      <mat-card class="feedback">
+        <img src="../assets/heart-beat.png" alt="" class="feedback__img">
+        <h5 class="feedback__h5">SMS-нагадування</h5>
+      </mat-card>
+    </div>
+  </article>
+</section>
+<section [ngClass]="'second'">
+  <article [ngClass]="'container'">
+    <mat-card class="second__card">
+    <h3 class="second__h3">СПОДОБАЛАСЬ СИСТЕМА?
+НЕ ЗАЙМАЙТЕСЬ САМОЛІКУВАННЯМ, ЗВЕРТАЙТЕСЬ ДО ЛІКАРІВ!</h3>
+    <button mat-raised-button routerLink="newcard">Створити картку</button>
+    </mat-card>
+  </article>
+</section>

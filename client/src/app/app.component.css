@@ -6,3 +6,78 @@
 .logo{
     margin-top: 20px;
 }
+.logo::after{
+    border: 0px solid red;
+}
+.about{
+    background-color: #efefef;
+    height: 45vh;
+}
+.fear{
+    width: 100%;
+    display: flex;
+}
+.features{
+    width:350px;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    margin: 20px 20px 0px 0px;
+}
+.features__img{
+    width:40px;
+    height: 40px;
+}
+.features__h4 span{
+    font-weight: bold;
+}
+.features__h4{
+    font-size:20px;
+    padding-left:10px;
+}
+.feed{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+.feedback{
+    width: 390px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: 20px 5px 0px 0px;
+}
+.feedback__img{
+    width: 30px;
+    height: 20px;
+    padding-right: 10px;
+}
+.feedback__h5{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.second{
+    background-color: #283593;
+    height: 30vh;
+    padding-top: 40px;
+}
+.second__card{
+    margin: 0px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: #283593;
+    width: 850px;
+    padding-top:10px;
+}
+.second__h3{
+    font-size: 20px;
+    color:#fff;
+}
+.selectdoctors{
+    width: 370px;
+}
+.selectdoctors:hover{
+    color:white;
+}
