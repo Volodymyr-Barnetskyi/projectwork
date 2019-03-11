@@ -1,13 +1,13 @@
 <header [ngClass]="'header'">
         <section [ngClass]="'container'" [ngStyle]="{'display': 'flex', 'flex-direction':'row'}">
-            <img src="/assets/logofinal.png" alt="MedArt" [ngClass]="'logo'" routerLink="/header">
+            <img class="animated fadeInRightBig delay-1.5s" src="/assets/logofinal.png" alt="MedArt" [ngClass]="'logo'" routerLink="/header">
             <button mat-raised-button color="primary" routerLink="/doctors" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Лікарі</button> 
             <button mat-raised-button color="primary" routerLink="/hospital" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Клініки</button>
             <button class="ml-auto" mat-raised-button color="accent" routerLink="/auth" [ngStyle]="{'margin': '20px 0px 0px 20px'}">Sign in</button> 
         </section>
-        <div [ngClass]="'container'"> <h1 [ngStyle]="{'color': '#fff','margin-top':'50px'}">Обери свого лікаря</h1>
+        <div [ngClass]="'container'"> <h1 [ngStyle]="{'color': '#fff','margin-top':'80px'}">Обери свого лікаря</h1>
           <mat-form-field [ngClass]="'selectdoctors'">
-              <mat-select color="primary" placeholder="Doctors" [ngClass]="'select'">
+              <mat-select placeholder="Doctors" [ngClass]="'select'">
                 <mat-option *ngFor="let see of likari" >
                   {{see.viewValue}}
                 </mat-option>
@@ -20,16 +20,16 @@
   <article [ngClass]="'container'">
     <h2>Інформація про систему</h2>
       <div class="fear">
-      <mat-card class="features">
+      <mat-card class="features animated infinite pulse delay-2s">
           <img src="../assets/blood-donation.png" alt="icon" class="features__img">
           <h4 class="features__h4"><span>Реформа eHealth</span> разом з Medics</h4>
       </mat-card>
-      <mat-card class="features">
+      <mat-card class="features animated infinite pulse delay-2s">
           <img src="../assets/doctors.png" alt="icon" class="features__img">
           <h4 class="features__h4"><span>Система Medics</span> для медичних
             закладів та лікарів</h4>
           </mat-card>
-      <mat-card class="features">
+      <mat-card class="features animated infinite pulse delay-2s">
           <img src="../assets/pacients.png" alt="icon" class="features__img">
           <h4 class="features__h4">Для пацієнтів. 
             Твоя медична картка</h4>
@@ -61,8 +61,15 @@
   <article [ngClass]="'container'">
     <mat-card class="second__card">
     <h3 class="second__h3">СПОДОБАЛАСЬ СИСТЕМА?
-НЕ ЗАЙМАЙТЕСЬ САМОЛІКУВАННЯМ, ЗВЕРТАЙТЕСЬ ДО ЛІКАРІВ!</h3>
+      НЕ ЗАЙМАЙТЕСЬ САМОЛІКУВАННЯМ, ЗВЕРТАЙТЕСЬ ДО ЛІКАРІВ!</h3>
     <button mat-raised-button routerLink="newcard">Створити картку</button>
     </mat-card>
   </article>
 </section>
+<footer [ngClass]="'footer'">
+  <article [ngClass]="'container'">
+    <div class="footer__text">
+      <mat-icon>laptop</mat-icon><h6 [ngClass]="'footer__h6'">© 2019 MedArt</h6>
+    </div>
+  </article>
+</footer>

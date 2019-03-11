@@ -1,0 +1,19 @@
+<article [ngClass]="'container'">
+<form action="" [formGroup]="card">
+  <mat-card [ngClass]="'card__items'">
+    <mat-form-field>
+      <input matInput placeholder="ПІБ" required color="primary" formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Стать" required color="primary" formControlName="sex">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Вік" required color="primary" formControlName="age">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Захворювання" required color="primary" formControlName="illness">
+    </mat-form-field>
+    <button mat-raised-button [disabled]="card.invalid">Confirm</button>
+  </mat-card>
+</form>
+</article>

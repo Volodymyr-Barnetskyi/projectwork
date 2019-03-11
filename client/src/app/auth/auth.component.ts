@@ -14,6 +14,7 @@ export class AuthComponent implements OnInit {
   });
   public login() {
     localStorage.setItem('nickname', this.form.value.logintask);
+    localStorage.setItem('password', this.form.value.pass);
   }
   constructor() { }
   ngOnInit() {
