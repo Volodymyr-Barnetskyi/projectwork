@@ -18,9 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/hospital',hospitalRouter);
-let connectionString = 'mongo://localhost:27017/header';
+let mongostart = 'mongo://localhost:27017/header';
 mongoose.Promise = global.Promise;
-mongoose.connect(connectionString).then(() => console.log('OK')).catch((err) => console.log('Error : ') + err);
+mongoose.connect(mongostart).then(() => console.log('OK')).catch((err) => console.log('Error : ') + err);
+let db = mongoose.connection;
+db.on('error', console.error.bind(console,'MongoDB connection error:'));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
